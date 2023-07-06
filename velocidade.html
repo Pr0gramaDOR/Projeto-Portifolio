@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+    function calcvelocidade(){
+     var distancia = parseInt(document.getElementById("dis").value)
+     var tempo = parseInt(document.getElementById("temp").value)
+     var resultado = distancia/tempo
+     document.getElementById("resultado").textContent = resultado+ " km/h";
+     var img =window.document.getElementById("imagem")
+     
+
+     if(resultado>=100){
+       img.src ="flash.jpg";
+     }else{
+        img.src="caracol.png";
+
+     }
+    }
+    
+</script>
+<body>
+    <Center><div class="titulo"><h1>Cauladora de Velocidade </h1></Center></div>
+    <center> <div class="eptext"><input type="text" id="dis" value="Distancia(KM)" class="campotext"> <br></div></center></div>
+    <center><div class="eptext2"><input type="text" id="temp" value="tempo(H)" class="campotext2"></div></center>
+    <center><button onclick="calcvelocidade()">Verificar</button></center>
+    <center><p id="resultado" > </p></center> 
+  <center> <div id="foto">
+    <img id="imagem" src="interrogação.png">
+   </div></center>  
+</body>
+<style>
+    .body {
+    background-color: black;
+    }
+    .eptext{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .eptext2{
+        margin-bottom: 1vw;
+    }
+    .campotext{
+    border-radius: 5px;
+    
+    }
+    .campotext2{
+        border-radius: 5px;
+    }
+   
+    
+    
+    </style>
+
+</html>
